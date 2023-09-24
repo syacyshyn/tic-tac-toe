@@ -44,7 +44,8 @@ function rowOfTwo() {
     let elementToBlockOrWin = null;
     let symbol = null;
     if ((mapOfIdsAndElements.get("top-left-square").innerText ===
-            mapOfIdsAndElements.get("top-middle-square").innerText) && mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
+            mapOfIdsAndElements.get("top-middle-square").innerText) &&
+        mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
         mapOfIdsAndElements.get("top-right-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("top-right-square");
@@ -53,8 +54,9 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("top-left-square").innerText ===
-        mapOfIdsAndElements.get("top-right-square").innerText) && mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
-    mapOfIdsAndElements.get("top-middle-square").innerText === "") {
+            mapOfIdsAndElements.get("top-right-square").innerText) &&
+        mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
+        mapOfIdsAndElements.get("top-middle-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("top-middle-square");
         symbol = mapOfIdsAndElements.get("top-left-square").innerText;
@@ -62,7 +64,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("top-middle-square").innerText ===
-            mapOfIdsAndElements.get("top-right-square").innerText) && mapOfIdsAndElements.get("top-middle-square").innerText !== "" &&
+            mapOfIdsAndElements.get("top-right-square").innerText) &&
+        mapOfIdsAndElements.get("top-middle-square").innerText !== "" &&
         mapOfIdsAndElements.get("top-left-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("top-left-square");
@@ -71,7 +74,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("middle-left-square").innerText ===
-            mapOfIdsAndElements.get("middle-middle-square").innerText) && mapOfIdsAndElements.get("middle-middle-square").innerText !== "" &&
+            mapOfIdsAndElements.get("middle-middle-square").innerText) &&
+        mapOfIdsAndElements.get("middle-middle-square").innerText !== "" &&
         mapOfIdsAndElements.get("middle-right-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("middle-right-square");
@@ -80,7 +84,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("middle-left-square").innerText ===
-            mapOfIdsAndElements.get("middle-right-square").innerText) && mapOfIdsAndElements.get("middle-left-square").innerText !== "" &&
+            mapOfIdsAndElements.get("middle-right-square").innerText) &&
+        mapOfIdsAndElements.get("middle-left-square").innerText !== "" &&
         mapOfIdsAndElements.get("middle-middle-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("middle-middle-square");
@@ -89,7 +94,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("middle-middle-square").innerText ===
-            mapOfIdsAndElements.get("middle-right-square").innerText) && mapOfIdsAndElements.get("middle-middle-square").innerText !== "" &&
+            mapOfIdsAndElements.get("middle-right-square").innerText) &&
+        mapOfIdsAndElements.get("middle-middle-square").innerText !== "" &&
         mapOfIdsAndElements.get("middle-left-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("middle-left-square");
@@ -98,7 +104,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("bottom-left-square").innerText ===
-            mapOfIdsAndElements.get("bottom-middle-square").innerText) && mapOfIdsAndElements.get("bottom-middle-square").innerText !== "" &&
+            mapOfIdsAndElements.get("bottom-middle-square").innerText) &&
+        mapOfIdsAndElements.get("bottom-middle-square").innerText !== "" &&
         mapOfIdsAndElements.get("bottom-right-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("bottom-right-square");
@@ -107,7 +114,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("bottom-left-square").innerText ===
-            mapOfIdsAndElements.get("bottom-right-square").innerText) && mapOfIdsAndElements.get("bottom-left-square").innerText !== "" &&
+            mapOfIdsAndElements.get("bottom-right-square").innerText) &&
+        mapOfIdsAndElements.get("bottom-left-square").innerText !== "" &&
         mapOfIdsAndElements.get("bottom-middle-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("bottom-middle-square");
@@ -116,7 +124,8 @@ function rowOfTwo() {
             return [isTrue, elementToBlockOrWin, symbol];
         }
     } else if ((mapOfIdsAndElements.get("bottom-middle-square").innerText ===
-            mapOfIdsAndElements.get("bottom-right-square").innerText) && mapOfIdsAndElements.get("bottom-middle-square").innerText !== "" &&
+            mapOfIdsAndElements.get("bottom-right-square").innerText) &&
+        mapOfIdsAndElements.get("bottom-middle-square").innerText !== "" &&
         mapOfIdsAndElements.get("bottom-left-square").innerText === "") {
         isTrue = true;
         elementToBlockOrWin = mapOfIdsAndElements.get("bottom-left-square");
@@ -128,10 +137,108 @@ function rowOfTwo() {
     return [isTrue, elementToBlockOrWin, symbol];
 }
 
+function columnOfTwo() {
+    let isTrue = false;
+    let elementToBlockOrWin = null;
+    let symbol = null;
+    if ((mapOfIdsAndElements.get("top-left-square").innerText ===
+            mapOfIdsAndElements.get("middle-left-square").innerText) &&
+        mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
+        mapOfIdsAndElements.get("bottom-left-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("bottom-left-square");
+        symbol = mapOfIdsAndElements.get("top-left-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("top-left-square").innerText ===
+            mapOfIdsAndElements.get("bottom-left-square").innerText) &&
+        mapOfIdsAndElements.get("top-left-square").innerText !== "" &&
+        mapOfIdsAndElements.get("middle-left-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("middle-left-square");
+        symbol = mapOfIdsAndElements.get("top-left-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("middle-left-square").innerText ===
+            mapOfIdsAndElements.get("bottom-left-square").innerText) &&
+        mapOfIdsAndElements.get("middle-left-square").innerText !== "" &&
+        mapOfIdsAndElements.get("top-left-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("top-left-square");
+        symbol = mapOfIdsAndElements.get("bottom-left-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("top-middle-square").innerText ===
+            mapOfIdsAndElements.get("middle-middle-square").innerText) &&
+        mapOfIdsAndElements.get("top-middle-square").innerText !== "" &&
+        mapOfIdsAndElements.get("bottom-middle-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("bottom-middle-square");
+        symbol = mapOfIdsAndElements.get("top-middle-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("top-middle-square").innerText ===
+            mapOfIdsAndElements.get("bottom-middle-square").innerText) &&
+        mapOfIdsAndElements.get("top-middle-square").innerText !== "" &&
+        mapOfIdsAndElements.get("middle-middle-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("middle-middle-square");
+        symbol = mapOfIdsAndElements.get("top-middle-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("middle-middle-square").innerText ===
+            mapOfIdsAndElements.get("bottom-middle-square").innerText) &&
+        mapOfIdsAndElements.get("middle-middle-square").innerText !== "" &&
+        mapOfIdsAndElements.get("top-middle-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("top-middle-square");
+        symbol = mapOfIdsAndElements.get("bottom-middle-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("top-right-square").innerText ===
+            mapOfIdsAndElements.get("middle-right-square").innerText) &&
+        mapOfIdsAndElements.get("top-right-square").innerText !== "" &&
+        mapOfIdsAndElements.get("bottom-right-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("bottom-right-square");
+        symbol = mapOfIdsAndElements.get("top-right-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("top-right-square").innerText ===
+            mapOfIdsAndElements.get("bottom-right-square").innerText) &&
+        mapOfIdsAndElements.get("top-right-square").innerText !== "" &&
+        mapOfIdsAndElements.get("middle-right-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("middle-right-square");
+        symbol = mapOfIdsAndElements.get("top-right-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    } else if ((mapOfIdsAndElements.get("middle-right-square").innerText ===
+            mapOfIdsAndElements.get("bottom-right-square").innerText) &&
+        mapOfIdsAndElements.get("middle-right-square").innerText !== "" &&
+        mapOfIdsAndElements.get("top-right-square").innerText === "") {
+        isTrue = true;
+        elementToBlockOrWin = mapOfIdsAndElements.get("top-right-square");
+        symbol = mapOfIdsAndElements.get("bottom-right-square").innerText;
+        if (symbol === "O") {
+            return [isTrue, elementToBlockOrWin, symbol];
+        }
+    }
+    return [isTrue, elementToBlockOrWin, symbol];
+}
+
 function pickRandomOpenSquare() {
     let arrayOfOpenSquares = [];
-    for (let [key, value] of mapOfIdsAndElements) {
-        if(value.innerText === "") {
+    for (let [_, value] of mapOfIdsAndElements) {
+        if (value.innerText === "") {
             arrayOfOpenSquares.push(value);
         }
     }
@@ -141,9 +248,12 @@ function pickRandomOpenSquare() {
 
 function determinePossibleWins() {
     let horizontalResults = rowOfTwo();
+    let verticalResults = columnOfTwo();
     if (horizontalResults[2] !== null) {
         horizontalResults[1].innerText = "O";
-    } else if (horizontalResults[2] === null) {
+    } else if (verticalResults[2] !== null) {
+        verticalResults[1].innerText = "O";
+    } else {
         pickRandomOpenSquare();
     }
 }
